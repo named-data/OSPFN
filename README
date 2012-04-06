@@ -107,6 +107,8 @@ $ cd OSPFN
 $ make
 $ sudo make install
 
+Note: In some OS /var/run is not persistent ie after restart /var/run/quagga-state directory disappear. To get around this problem one can create directory in persistent partition and change localstatedir=/var/run/quagga-state to
+localstatedir = /directory/path/to/quagga-state. Or someone can also make /var/run/qugga-state persistent by setting appropriate permissions in /etc/rc.local.
 
 ==================================
 6. Configuration
